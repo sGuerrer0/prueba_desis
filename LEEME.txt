@@ -1,0 +1,25 @@
+Ejercicio de diagnostico.
+
+- Tecnologias utilizadas: HMTL, JavaScript (jquery, ajax), PHP y MYSQL
+
+**Indicaciones**
+
+Software BD: DBeaver v. 24.0.1
+Version MYSQL: 8.0.17
+Versión PHP: 7.3.10
+appServ: 9.3.0 (contiene PHP y MYSQL con versiones mencionadas).
+url appserv: https://www.appserv.org/en/download/
+
+1. En caso de desplegar el proyecto de forma local utilizando appServ, la carpeta **prueba_desis** del proyecto debe estar dentro de la carpeta "www" ruta "C:\AppServ\www\", 
+en caso de utilizar xampp el proyecto debe encontrarse dentro de la carpeta "htdocs" ruta "C:\xampp\htdocs\".
+
+- URL uso local: http://localhost/prueba_desis/index.html
+
+2. El archivo **conex.php** ubicado en la carpeta **back** contiene la conexión a base de datos, es necesario poner contraseña (en caso de usar), para desplegar información de base de datos.
+
+3. El archivo desis_db.sql contiene las tablas correspondientes para el almacenamiento de los datos del fomulario.
+
+4. Utilizar herramienta de gestión de base de datos de preferencia para importar tablas de base de datos o directamente desde la terminal. Ejm. DBeaver. 
+Puede haber algún error en cuanto a versiones, se recomienda utilizar versiones mencionadas en el documento.
+
+NOTA: *El Archivo "Documentacion.docx" ubicado en la raiz contiene la información detallada de validaciones e información de la interfaz.*

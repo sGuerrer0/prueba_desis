@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de votación</title>
+</head>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+<script src="js/script.js"></script>
+<body>
+    <h1>Formulario de votación:</h1>
+    <!-- Contenedor Formulario -->
+    <form class="form-container">
+        <!-- Nombre y Apellido -->
+        <div class="d-space">
+            <label for="v_nombre">Nombre y Apellido</label>
+            <div>
+                <input placeholder="Juan Perez" class="inputs-w" type="text" id="v_nombre" required><br>
+                <span style="color:red;" id="invalid_name"></span>
+            </div>
+        </div>
+        <!-- Alias -->
+        <div class="d-space">
+            <label for="v_alias">Alias</label>
+            <div>
+                <input placeholder="JP" class="inputs-w" type="text" id="v_alias" required><br>
+                <span style="color:red;" id="invalid_alias"></span>
+            </div>
+        </div>
+        <!-- RUT -->
+        <div class="d-space">
+            <label for="v_rut">RUT</label>
+            <div>
+                <input placeholder="11111111-1" class="inputs-w" type="text" id="v_rut" required><br>
+                <span style="color:red;" id="invalid_rut"></span>
+            </div>
+        </div>
+        <!-- Email -->
+        <div class="d-space">
+            <label for="v_email">Email</label>
+            <div>
+                <input placeholder="juan.perez@gmail.com" class="inputs-w" type="email" id="v_email" onchange="mostrar_error_email()" required><br>
+                <span style="color:red;" id="invalid_email"></span>
+            </div>
+        </div>
+        <!-- Región -->
+        <div class="d-space">
+            <label for="">Región</label>
+            <select class="inputs-w" id="select_region" onchange="filtrar_comunas();" required></select>
+        </div>
+        <!-- Comuna -->
+        <div class="d-space">
+            <label for="">Comuna</label>
+            <select class="inputs-w" id="select_comuna" required></select>
+        </div>
+        <!-- Candidato -->
+        <div class="d-space">
+            <label for="">Candidato</label>
+            <select class="inputs-w" id="select_candidato" required></select>
+        </div>
+        <!-- Como se enteró de nosotros -->
+        <div style="display:flex;">
+            <span style="margin-right:50px;">Como se enteró de Nosotros</span>
+            <div id="nosotros_container"></div>
+        </div>
+        <!-- Botón enviar voto -->
+        <div style="margin-top: 1rem;">
+            <button type="submit" id="btn_votar" onclick="enviar_voto();">Votar</button>
+        </div>
+    </form>
+    <!-- Fin contenedor formulario -->
+</body>
+
+</html>
+
+<style>
+    .form-container {
+        border: 1px solid gray;
+        width: 600px;
+        padding: 10px;
+    }
+
+    .inputs-w {
+        width: 220px;
+        padding:2px;
+        box-sizing: border-box; 
+    }
+
+    .d-space {
+        width: 450px;
+        display: flex;
+        justify-content: space-between;
+        padding: 2px;
+    }
+</style>
